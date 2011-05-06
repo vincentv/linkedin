@@ -45,6 +45,7 @@ module LinkedIn
         # of the url creation ourselves.
         def parse_oauth_options
           {
+            :site => full_oauth_url_for(:site, :api_host),
             :request_token_url => full_oauth_url_for(:request_token, :api_host),
             :access_token_url  => full_oauth_url_for(:access_token,  :api_host),
             :authorize_url     => full_oauth_url_for(:authorize,     :auth_host),

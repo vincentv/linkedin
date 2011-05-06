@@ -13,7 +13,7 @@ describe "LinkedIn::Client" do
       let(:consumer) { client.consumer }
 
       it "should return a configured OAuth consumer" do
-        consumer.site.should == ''
+        consumer.site.should == 'https://api.linkedin.com'
         consumer.request_token_url.should == 'https://api.linkedin.com/uas/oauth/requestToken'
         consumer.access_token_url.should == 'https://api.linkedin.com/uas/oauth/accessToken'
         consumer.authorize_url.should == 'https://www.linkedin.com/uas/oauth/authorize'
